@@ -1,0 +1,17 @@
+# Node / Next.js
+node_modules/
+.next/
+frontend/.env.local
+
+# Python
+venv/
+__pycache__/
+*.pyc
+backend/.env
+
+# ML
+ml/models/*.pkl
+
+# OS/editor
+.DS_Store
+.vscode/
