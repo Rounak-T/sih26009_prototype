@@ -19,3 +19,8 @@ export async function getRisks(): Promise<RiskEntry[]> {
   const res = await fetch("/data/risks.json");
   return res.json();
 }
+
+export async function getProspectivity(): Promise<GeoJSON.FeatureCollection> {
+  const res = await fetch("/data/prospectivity.geojson");
+  return res.json();
+}
