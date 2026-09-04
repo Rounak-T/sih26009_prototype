@@ -1,0 +1,5 @@
+[
+  { "id": "mine_001", "name": "Balaghat Manganese Block", "state": "Madhya Pradesh", "lat": 21.8, "lng": 80.18, "status": "active", "type": "existing_mine" },
+  { "id": "mine_002", "name": "Keonjhar Manganese Belt", "state": "Odisha", "lat": 21.63, "lng": 85.58, "status": "active", "type": "existing_mine" },
+  { "id": "mine_003", "name": "Nagpur Manganese Zone", "state": "Maharashtra", "lat": 21.15, "lng": 79.09, "status": "active", "type": "existing_mine" }
+]

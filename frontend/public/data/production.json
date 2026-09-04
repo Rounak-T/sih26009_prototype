@@ -1,0 +1,5 @@
+[
+  { "mine_id": "mine_001", "period": "2025-Q1", "planned_tonnes": 11000, "actual_tonnes": 10200 },
+  { "mine_id": "mine_001", "period": "2025-Q2", "planned_tonnes": 11500, "actual_tonnes": 9800 },
+  { "mine_id": "mine_002", "period": "2025-Q1", "planned_tonnes": 9000, "actual_tonnes": 8700 }
+]

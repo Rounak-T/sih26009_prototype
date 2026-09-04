@@ -1,0 +1,8 @@
+[
+  { "mine_id": "mine_001", "factors": [
+    { "name": "Equipment downtime", "weight_pct": 40, "value": 0.55 },
+    { "name": "Environmental conditions", "weight_pct": 25, "value": 0.3 },
+    { "name": "Production deviation", "weight_pct": 20, "value": 0.4 },
+    { "name": "Operational delays", "weight_pct": 15, "value": 0.2 }
+  ]}
+]

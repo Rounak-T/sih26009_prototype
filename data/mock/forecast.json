@@ -1,0 +1,4 @@
+[
+  { "mine_id": "mine_001", "period": "2026-Q4", "planned_tonnes": 12000, "forecast_tonnes": 9500, "shortfall_pct": 20.8, "risk_score": 68, "risk_level": "High" },
+  { "mine_id": "mine_002", "period": "2026-Q4", "planned_tonnes": 9500, "forecast_tonnes": 9000, "shortfall_pct": 5.3, "risk_score": 32, "risk_level": "Medium" }
+]
