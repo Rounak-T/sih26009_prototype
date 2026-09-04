@@ -24,3 +24,14 @@ export interface Forecast {
   risk_score: number;
   risk_level: "Low" | "Medium" | "High";
 }
+
+export interface RiskFactor {
+  name: string;
+  weight_pct: number;
+  value: number;
+}
+
+export interface RiskEntry {
+  mine_id: string;
+  factors: RiskFactor[];
+}
