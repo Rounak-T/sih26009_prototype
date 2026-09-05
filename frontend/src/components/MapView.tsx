@@ -8,7 +8,8 @@ import type { Feature } from "geojson";
 
 export default function MapView() {
   const [mines, setMines] = useState<Mine[]>([]);
-  const [prospectivity, setProspectivity] = useState<GeoJSON.FeatureCollection | null>(null);
+  const [prospectivity, setProspectivity] =
+    useState<GeoJSON.FeatureCollection | null>(null);
 
   useEffect(() => {
     getMines().then(setMines);
@@ -26,10 +27,14 @@ export default function MapView() {
   };
 
   return (
-    <MapContainer center={[22.9, 79.5]} zoom={6} className="h-full w-full rounded-xl">
+    <MapContainer
+      center={[22.9, 79.5]}
+      zoom={6}
+      className="h-full w-full rounded-xl"
+    >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; OpenStreetMap contributors'
+        attribution="&copy; OpenStreetMap contributors"
       />
       {prospectivity && (
         <GeoJSON
@@ -38,7 +43,7 @@ export default function MapView() {
           onEachFeature={(feature, layer) => {
             const p = feature.properties;
             layer.bindPopup(
-              `<strong>Prospectivity: ${(p.prospectivity_score * 100).toFixed(0)}%</strong><br/>Confidence: ${(p.confidence * 100).toFixed(0)}%<br/>Reserve: ${p.reserve_min.toLocaleString()} - ${p.reserve_max.toLocaleString()} t`
+              `<strong>Prospectivity: ${(p.prospectivity_score * 100).toFixed(0)}%</strong><br/>Confidence: ${(p.confidence * 100).toFixed(0)}%<br/>Reserve: ${p.reserve_min.toLocaleString()} - ${p.reserve_max.toLocaleString()} t`,
             );
           }}
         />
@@ -49,6 +54,10 @@ export default function MapView() {
             <strong>{mine.name}</strong>
             <br />
             {mine.state}
+            <br />
+            <a href={`/mines/${mine.id}`} className="text-blue-600 underline">
+              View Details
+            </a>
           </Popup>
         </Marker>
       ))}

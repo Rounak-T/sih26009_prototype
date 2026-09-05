@@ -35,3 +35,10 @@ export interface RiskEntry {
   mine_id: string;
   factors: RiskFactor[];
 }
+
+export interface Recommendation {
+  mine_id: string;
+  risk_level: string;
+  primary_cause: string;
+  recommendation: string;
+}

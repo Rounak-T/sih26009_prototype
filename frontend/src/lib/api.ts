@@ -1,4 +1,4 @@
-import { Mine, ProductionRecord, Forecast, RiskEntry } from "./types";
+import { Mine, ProductionRecord, Forecast, RiskEntry, Recommendation } from "./types";
 
 export async function getMines(): Promise<Mine[]> {
   const res = await fetch("/data/mines.json");
@@ -22,5 +22,10 @@ export async function getRisks(): Promise<RiskEntry[]> {
 
 export async function getProspectivity(): Promise<GeoJSON.FeatureCollection> {
   const res = await fetch("/data/prospectivity.geojson");
+  return res.json();
+}
+
+export async function getRecommendations(): Promise<Recommendation[]> {
+  const res = await fetch("/data/recommendations.json");
   return res.json();
 }
