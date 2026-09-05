@@ -4,3 +4,4 @@ from app.models.forecast import Forecast
 from app.models.risk import RiskFactor
 from app.models.recommendation import Recommendation
 from app.models.prospectivity import ProspectivityZone
+from app.models.upload import UploadedDataset

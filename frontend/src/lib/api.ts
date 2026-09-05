@@ -47,3 +47,14 @@ export async function getProspectivity(): Promise<GeoJSON.FeatureCollection> {
   const res = await fetch(`${API_URL}/prospectivity`);
   return res.json();
 }
+
+export async function uploadFile(file: File): Promise<{ job_id: number; status: string; row_count: number }> {
+  const formData = new FormData();
+  formData.append("file", file);
+  const res = await fetch(`${API_URL}/upload`, { method: "POST", body: formData });
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.detail || "Upload failed");
+  }
+  return res.json();
+}
