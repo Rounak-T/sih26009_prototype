@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes import mines, production, forecast, risks, recommendations, prospectivity
 
 app = FastAPI(title="SIH26009 Manganese API")
 
@@ -10,6 +11,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(mines.router)
+app.include_router(production.router)
+app.include_router(forecast.router)
+app.include_router(risks.router)
+app.include_router(recommendations.router)
+app.include_router(prospectivity.router)
 
 @app.get("/")
 def read_root():
