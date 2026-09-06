@@ -13,6 +13,7 @@ const navItems = [
   { href: "/risk", label: "Risk Analysis" },
   { href: "/recommendations", label: "Recommendations" },
   { href: "/upload", label: "Upload Data" },
+  { href: "/predict", label: "Predict" },
   { href: "/about", label: "About" },
 ];
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="flex h-screen bg-gray-50">
         <aside className="w-56 bg-slate-900 text-white flex flex-col p-4 space-y-2">
-          <h2 className="text-lg font-bold mb-4">SIH26009</h2>
+          <h2 className="text-lg font-bold mb-4"></h2>
           {navItems.map((item) => (
             <Link
               key={item.href}
